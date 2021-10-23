@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://ArenaSoftware/ArenaSoftware/Pc_Minigame_Start.gd" type="Script" id=1]
+[ext_resource path="res://ArenaSoftware/ArenaSoftware/softwareTableSprite.png" type="Texture" id=2]
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ) ],
+"loop": false,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 10, 20 )
+
+[sub_resource type="DynamicFont" id=18]
+font_data = ExtResource( 3 )
+
+[node name="Pc_Minigame_Start" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="pcMinigame" type="AnimatedSprite" parent="."]
+position = Vector2( 386.304, 102.857 )
+frames = SubResource( 16 )
+
+[node name="PcMinigameArea" type="Area2D" parent="pcMinigame"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pcMinigame/PcMinigameArea"]
+position = Vector2( 0, 5 )
+shape = SubResource( 17 )
+
+[node name="Label" type="Label" parent="pcMinigame"]
+visible = false
+anchor_top = -0.236
+anchor_bottom = -0.236
+margin_left = -5.0
+margin_top = -15.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 18 )
+text = "Aperte \"E\" para comecar o jogo"
+__meta__ = {
+"_edit_use_anchors_": false
+}

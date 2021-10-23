@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Minecraft.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ArenaSoftware/ArenaSoftware/Morcego_Congratulations.gd" type="Script" id=2]
+[ext_resource path="res://ArenaSoftware/ArenaSoftware/batNpcSprite.png" type="Texture" id=3]
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 29.9616
+
+[sub_resource type="DynamicFont" id=12]
+font_data = ExtResource( 1 )
+
+[node name="Morcego_Congratulations" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="batNpcSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 324.081, 200.62 )
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 10 )
+playing = true
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 324.059, 197.706 )
+shape = SubResource( 11 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 295.996
+margin_top = 177.149
+margin_right = 495.996
+margin_bottom = 193.149
+rect_scale = Vector2( 0.317786, 0.362137 )
+custom_fonts/font = SubResource( 12 )
+text = "Aperte \"E\" para interagir"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="." to="." method="_on_Morcego_Congratulations_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Morcego_Congratulations_body_exited"]

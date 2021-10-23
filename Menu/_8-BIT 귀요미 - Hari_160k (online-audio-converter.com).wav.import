@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/_8-BIT 귀요미 - Hari_160k (online-audio-converter.com).wav-0c06d878dd9666dbf0e78fccbe79b8c2.sample"
+
+[deps]
+
+source_file="res://Menu/_8-BIT 귀요미 - Hari_160k (online-audio-converter.com).wav"
+dest_files=[ "res://.import/_8-BIT 귀요미 - Hari_160k (online-audio-converter.com).wav-0c06d878dd9666dbf0e78fccbe79b8c2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=true
+compress/mode=0

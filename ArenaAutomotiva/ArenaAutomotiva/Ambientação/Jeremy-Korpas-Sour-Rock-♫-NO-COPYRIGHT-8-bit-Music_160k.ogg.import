@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Jeremy-Korpas-Sour-Rock-♫-NO-COPYRIGHT-8-bit-Music_160k.ogg-40713e9002c507f104512d836f3112f5.oggstr"
+
+[deps]
+
+source_file="res://ArenaAutomotiva/ArenaAutomotiva/Ambientação/Jeremy-Korpas-Sour-Rock-♫-NO-COPYRIGHT-8-bit-Music_160k.ogg"
+dest_files=[ "res://.import/Jeremy-Korpas-Sour-Rock-♫-NO-COPYRIGHT-8-bit-Music_160k.ogg-40713e9002c507f104512d836f3112f5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

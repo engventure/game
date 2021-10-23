@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://menu/VideoFundoMenu2_1280x720.webm" type="VideoStream" id=1]
+[ext_resource path="res://menu/VideoPlayer.gd" type="Script" id=2]
+[ext_resource path="res://menu/Novo Jogo.png" type="Texture" id=3]
+[ext_resource path="res://menu/start.gd" type="Script" id=4]
+[ext_resource path="res://menu/credits.gd" type="Script" id=7]
+[ext_resource path="res://menu/Creditos.png" type="Texture" id=8]
+[ext_resource path="res://menu/musica_menu.wav" type="AudioStream" id=10]
+
+[node name="menu" type="Node2D"]
+
+[node name="wallpaper" type="VideoPlayer" parent="."]
+margin_left = -1.0
+margin_top = 2.0
+margin_right = 1280.0
+margin_bottom = 720.0
+stream = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Button" parent="."]
+margin_left = 95.0
+margin_top = 398.368
+margin_right = 417.0
+margin_bottom = 496.368
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="novo_jogo" type="Sprite" parent="start"]
+position = Vector2( 166.901, 47.7519 )
+scale = Vector2( 0.299, 0.311477 )
+texture = ExtResource( 3 )
+
+[node name="credits" type="Button" parent="."]
+margin_left = 93.9685
+margin_top = 511.426
+margin_right = 415.969
+margin_bottom = 609.426
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="creditos" type="Sprite" parent="credits"]
+position = Vector2( 167.55, 49.2373 )
+scale = Vector2( 0.299299, 0.309327 )
+texture = ExtResource( 8 )
+
+[node name="music_menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -12.116
+autoplay = true
+
+[connection signal="mouse_entered" from="start" to="start" method="_on_start_mouse_entered"]
+[connection signal="mouse_exited" from="start" to="start" method="_on_start_mouse_exited"]
+[connection signal="pressed" from="start" to="start" method="_on_start_pressed"]
+[connection signal="mouse_entered" from="credits" to="credits" method="_on_credits_mouse_entered"]
+[connection signal="mouse_exited" from="credits" to="credits" method="_on_credits_mouse_exited"]
+[connection signal="pressed" from="credits" to="credits" method="_on_credits_pressed"]
