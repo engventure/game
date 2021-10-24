@@ -22,5 +22,5 @@ func _on_credits_pressed():
 
 	$creditos.modulate.g = 0.8
 	$creditos.modulate.g = 0.8
-	get_tree().change_scene("res://menu/credits.tscn")
+	get_tree().change_scene("res://Menu/credits.tscn")
 	pass # Replace with function body.

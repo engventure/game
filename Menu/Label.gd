@@ -12,7 +12,7 @@ func _showChatter():
 		self.visible_characters = drawTextSpeed
 
 	if drawTextSpeed == chatterLimit:
-		get_tree().change_scene("res://menu/menu.tscn")
+		get_tree().change_scene("res://Menu/menu.tscn")
 
 	
 func _process(delta):
