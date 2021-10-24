@@ -5,8 +5,8 @@ A ideia principal do jogo é introduzir o público infantil às engenharias da U
 ## 📬 Política de commit
 Quando realizar seu commit, escolha a branch wip. Depois de conferir se o commit realmente foi aquilo que se esperava e verificar erros, faça um pull request da branch wip para a main e espere ser aprovado.
 ## 🚀 Como jogar?
-Você pode baixar esse código fonte, e utilizá-lo com o Godot. (necessitará de um arquivo chamado project.godot)
-Ou pode ir no repositório releases e baixar o jogo exportado por lá.
+- Você pode baixar esse código fonte, e utilizá-lo com o Godot. (necessitará de um arquivo chamado project.godot)
+- Ou pode ir no repositório releases e baixar o jogo exportado por lá.
 ## 🤝 Quem somos?
 - Arthur - Front End
 - Breno - Front End
